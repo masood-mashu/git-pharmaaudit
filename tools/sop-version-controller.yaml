@@ -1,14 +1,18 @@
-name: "sop-version-controller"
+name: sop-version-controller
+version: 1.0.0
 description: "Confirms that manufacturing batch execution used current effective SOP revision"
-version: "0.1.0"
-runtime:
-  language: "python"
-  entrypoint: "sop_version_controller.py"
-parameters:
-  type: "object"
+input_schema:
+  type: object
   properties:
     sop_meta_json:
-      type: "string"
+      type: string
       description: "JSON with executed_version and current_effective_version"
   required:
-    - "sop_meta_json"
+    - sop_meta_json
+implementation:
+  type: script
+  path: sop_version_controller.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true

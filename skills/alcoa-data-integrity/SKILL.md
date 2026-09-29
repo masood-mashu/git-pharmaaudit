@@ -1,10 +1,15 @@
-# Skill: Alcoa Data Integrity
+---
+name: alcoa-data-integrity
+description: cGMP data integrity and pharmaceutical batch audit trail guidelines
+---
 
-## Description
+# Alcoa Data Integrity
+
+## Overview
 cGMP data integrity and pharmaceutical batch audit trail guidelines.
 
-## Procedural Workflow
-1. Ingest relevant parameters from repository state.
-2. Execute deterministic analysis via `GitPharmaAudit` registered tools.
-3. Validate output against compliance rules in `RULES.md`.
-4. Return structured status dictionary to calling runtime.
+## Procedure
+1. Ingest input manifest or configuration artifact.
+2. Execute automated deterministic verification checks.
+3. Compare findings against predefined compliance policies.
+4. Record findings and sign the audit manifest.

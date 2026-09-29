@@ -1,14 +1,18 @@
-name: "audit-trail-immutability-checker"
+name: audit-trail-immutability-checker
+version: 1.0.0
 description: "Verifies sequential chronological continuity and immutability of audit trail entries"
-version: "0.1.0"
-runtime:
-  language: "python"
-  entrypoint: "audit_trail_immutability_checker.py"
-parameters:
-  type: "object"
+input_schema:
+  type: object
   properties:
     log_entries_json:
-      type: "string"
+      type: string
       description: "JSON list of sequential audit entries with sequence_id"
   required:
-    - "log_entries_json"
+    - log_entries_json
+implementation:
+  type: script
+  path: audit_trail_immutability_checker.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true
