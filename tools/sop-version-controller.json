@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "verify_sop_version",
+  "description": "Confirms that manufacturing batch execution used current effective SOP revision",
+  "type": "object",
+  "properties": {
+    "sop_meta_json": {
+      "type": "string",
+      "description": "JSON with executed_version and current_effective_version"
+    }
+  },
+  "required": [
+    "sop_meta_json"
+  ]
+}

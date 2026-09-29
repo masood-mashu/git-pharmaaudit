@@ -1,0 +1,25 @@
+spec_version: "0.1.0"
+name: "git-pharmaaudit"
+version: "0.1.0"
+description: "Autonomous FDA 21 CFR Part 11 Electronic Batch Record & Digital Signature Auditor"
+framework: "opengap"
+authors:
+  - name: "masood-mashu"
+    email: "masoodmashu03@gmail.com"
+license: "Apache-2.0"
+
+runtime:
+  language: "python"
+  version: ">=3.10"
+  timeout: 120
+
+tags:
+  - healthcare
+  - fda-compliance
+  - 21-cfr-part-11
+  - pharma-manufacturing
+  - passport-challenge
+
+metadata:
+  passport_id: "aps-pharmaaudit-01"
+  passport_category: "Healthcare"

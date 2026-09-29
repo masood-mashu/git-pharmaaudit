@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "verify_electronic_signature",
+  "description": "Validates FDA 21 CFR Part 11 compliance of digital signatures on batch records",
+  "type": "object",
+  "properties": {
+    "sig_manifest_json": {
+      "type": "string",
+      "description": "JSON with signer_id, timestamp_iso, signature_hash"
+    }
+  },
+  "required": [
+    "sig_manifest_json"
+  ]
+}

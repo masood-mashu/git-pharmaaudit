@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "check_audit_trail_immutability",
+  "description": "Verifies sequential chronological continuity and immutability of audit trail entries",
+  "type": "object",
+  "properties": {
+    "log_entries_json": {
+      "type": "string",
+      "description": "JSON list of sequential audit entries with sequence_id"
+    }
+  },
+  "required": [
+    "log_entries_json"
+  ]
+}

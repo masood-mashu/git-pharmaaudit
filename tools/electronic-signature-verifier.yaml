@@ -1,0 +1,14 @@
+name: "electronic-signature-verifier"
+description: "Validates FDA 21 CFR Part 11 compliance of digital signatures on batch records"
+version: "0.1.0"
+runtime:
+  language: "python"
+  entrypoint: "electronic_signature_verifier.py"
+parameters:
+  type: "object"
+  properties:
+    sig_manifest_json:
+      type: "string"
+      description: "JSON with signer_id, timestamp_iso, signature_hash"
+  required:
+    - "sig_manifest_json"
